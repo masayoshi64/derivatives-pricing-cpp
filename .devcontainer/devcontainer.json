@@ -1,0 +1,14 @@
+{
+	"name": "C++",
+	"context": "..",
+	"dockerFile": "Dockerfile",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"vadimcn.vscode-lldb"
+			]
+		}
+	}
+}
