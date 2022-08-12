@@ -1,4 +1,6 @@
 #include "simple_mc.h"
+#include "vanilla.h"
+#include "vanilla.h"
 #include <iostream>
 using namespace std;
 
@@ -12,7 +14,8 @@ int main()
     unsigned long number_of_paths = 1e6;
 
     payoff_call call_payoff(strike);
-    double result_call = simple_monte_carlo(call_payoff, expiry, spot, vol, r, number_of_paths);
+    vanilla_option call_option(call_payoff, expiry);
+    double result_call = simple_monte_carlo(call_option, spot, vol, r, number_of_paths);
 
     cout << result_call << endl; // 1233
 }

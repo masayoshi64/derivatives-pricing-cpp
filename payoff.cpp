@@ -7,3 +7,7 @@ double payoff_call::operator()(double spot) const
 {
     return max(spot - strike, 0.0);
 }
+payoff *payoff_call::clone() const
+{
+    return new payoff_call(*this);
+}
